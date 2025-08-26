@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shieldify - Email Validator for your Business</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="img/email.svg" alt="iValidate Logo">
+        <span>Shieldify</span>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Email Validation & Scam Detection</h1>
+        <p>Protect your business from fake emails and scam messages instantly with <b>Shieldify</b>.</p>
+      </div>
+    </section>
+
+    <!-- Email Validator -->
+    <section class="container card">
+      <h2>Validate Your Email</h2>
+      <form action="/submit" method="post">
+        <label for="username">Email Address</label>
+        <input type="email" id="username" name="username" placeholder="Enter your email..." required>
+        <div class="btn-group">
+          <input id="submitBtn" class="btn" type="submit" value="Validate">
+          <button class="btn secondary" id="downloadReport" type="button">Download Report</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Results -->
+    <section class="container card">
+      <h2>Your Results</h2>
+      <div id="resultCont">
+        <p class="placeholder">Results will appear here after validation...</p>
+      </div>
+    </section>
+
+    <!-- Scam Analyzer -->
+    <section id="message-analyzer" class="container card">
+      <h2>Message Scam Analyzer</h2>
+      <p>Paste any suspicious message below and analyze it for scam patterns:</p>
+      <textarea id="userMessage" placeholder="Enter the message here..." rows="5"></textarea>
+      <button class="btn" onclick="analyzeMessage()">Analyze Message</button>
+      <div id="analysisResult" class="result-box"><p></p>Result will appear here...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Shieldify.com | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
